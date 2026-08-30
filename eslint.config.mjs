@@ -13,6 +13,9 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    ignores: ["components/ui/**"],
+  },
 ]);
 
 export default eslintConfig;
