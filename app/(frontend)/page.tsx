@@ -49,7 +49,7 @@ async function CategoriesBubbles() {
         </Link>
       ))}
       <Link href="/videos" className="rounded-full bg-primary px-3.5 py-1.5 text-sm font-semibold text-primary-foreground">
-        View all →
+        View all 
       </Link>
     </div>
   )
