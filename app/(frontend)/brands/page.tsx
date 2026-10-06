@@ -37,7 +37,7 @@ export default function BrandsPage() {
           <li>• Event coverage & appearances</li>
           <li>• Long-term ambassador deals</li>
         </ul>
-        <Link href="/contact" className={buttonVariants({ className: 'mt-6 rounded-full' })}>
+        <Link href="/advertise" className={buttonVariants({ className: 'mt-6 rounded-full' })}>
           Start a partnership
         </Link>
       </div>

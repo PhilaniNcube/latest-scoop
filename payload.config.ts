@@ -6,12 +6,20 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
+import { AdPackages } from './collections/AdPackages'
 import { Brands } from './collections/Brands'
 import { Categories } from './collections/Categories'
+import { Channels } from './collections/Channels'
+import { Consultations } from './collections/Consultations'
 import { Inquiries } from './collections/Inquiries'
 import { Media } from './collections/Media'
+import { Posts } from './collections/Posts'
+import { Services } from './collections/Services'
+import { Subscribers } from './collections/Subscribers'
+import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { Videos } from './collections/Videos'
+import { SiteSettings } from './globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,8 +30,26 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    meta: {
+      titleSuffix: '· Latest Scoop Media',
+    },
   },
-  collections: [Users, Media, Videos, Categories, Brands, Inquiries],
+  collections: [
+    Users,
+    Media,
+    Videos,
+    Channels,
+    Services,
+    Posts,
+    Categories,
+    AdPackages,
+    Testimonials,
+    Brands,
+    Inquiries,
+    Consultations,
+    Subscribers,
+  ],
+  globals: [SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'dev-secret-replace-in-prod-32-chars-min',
   typescript: {

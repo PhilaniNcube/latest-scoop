@@ -117,3 +117,64 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Typography for Lexical rich text rendered from Payload */
+@layer components {
+  .prose-latest {
+    @apply text-[15px] leading-7 text-muted-foreground;
+  }
+  .prose-latest > * + * {
+    @apply mt-4;
+  }
+  .prose-latest > :first-child {
+    @apply mt-0;
+  }
+  .prose-latest h1 {
+    @apply mt-8 text-2xl font-black tracking-tight text-foreground;
+  }
+  .prose-latest h2 {
+    @apply mt-8 text-xl font-bold tracking-tight text-foreground;
+  }
+  .prose-latest h3 {
+    @apply mt-6 text-lg font-bold tracking-tight text-foreground;
+  }
+  .prose-latest h4,
+  .prose-latest h5,
+  .prose-latest h6 {
+    @apply mt-5 text-base font-bold text-foreground;
+  }
+  .prose-latest a {
+    @apply font-medium text-primary underline underline-offset-4;
+  }
+  .prose-latest ul {
+    @apply list-disc space-y-1.5 pl-6;
+  }
+  .prose-latest ol {
+    @apply list-decimal space-y-1.5 pl-6;
+  }
+  .prose-latest blockquote {
+    @apply border-l-2 border-primary pl-4 text-foreground/80 italic;
+  }
+  .prose-latest strong {
+    @apply font-semibold text-foreground;
+  }
+  .prose-latest img {
+    @apply rounded-xl border;
+  }
+  .prose-latest hr {
+    @apply my-8 border-border;
+  }
+  .prose-latest code {
+    @apply rounded bg-muted px-1.5 py-0.5 text-sm text-foreground;
+  }
+  .prose-latest table {
+    @apply w-full border-collapse text-sm;
+  }
+  .prose-latest th,
+  .prose-latest td {
+    @apply border border-border px-3 py-2 text-left;
+  }
+  .prose-latest th {
+    @apply bg-muted font-semibold text-foreground;
+  }
+}
